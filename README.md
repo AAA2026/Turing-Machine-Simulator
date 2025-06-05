@@ -31,7 +31,7 @@ python3 main.py
 
 The script will first load the machine specification from `turing_machine.json`. If the file is missing or incorrectly formatted, an error message will be displayed. Upon successful loading, the simulator will prompt you to enter the initial input tape as a string. After you provide the input, the simulation begins. The program will print the initial tape configuration and then proceed step-by-step, showing the current state and the tape contents with the head position marked (e.g., `[symbol]`) at each transition. A small delay is introduced between steps for better visualization. The simulation concludes when the machine enters an accepting state (outputting "Input accepted!"), enters a state with no valid transition for the current symbol (outputting "Input rejected."), or exceeds the maximum step limit (outputting a warning about a potential infinite loop).
 
-### Example Execution (for 0011)
+### Example Execution 
 
 ```
 Enter the input tape (as a string): 0011
