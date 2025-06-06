@@ -1,0 +1,26 @@
+{
+    "states": ["zero", "one", "x", "blank", "accept"],
+    "initial_state": "zero",
+    "accepting_states": ["accept"],
+    "delta": {
+        "zero": {
+            "0": ["X", "one", "R"],
+            "Y": ["Y", "blank", "R"]
+        },
+        "one": {
+            "0": ["0", "one", "R"],
+            "Y": ["Y", "one", "R"],
+            "1": ["Y", "x", "L"]
+        },
+        "x": {
+            "Y": ["Y", "x", "L"],
+            "0": ["0", "x", "L"],
+            "X": ["X", "zero", "R"]
+        },
+        "blank": {
+            "X": ["X", "blank", "R"],
+            "Y": ["Y", "blank", "R"],
+            "": ["", "accept", "L"]
+        }
+    }
+}
